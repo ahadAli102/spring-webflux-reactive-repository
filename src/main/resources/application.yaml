@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: location-server
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/location_finder
+    username: root
+    password: password
+    pool:
+      enabled: true
+      max-size: 20
+      initial-size: 10
+      max-idle-time: 30m
+
+logging:
+  level:
+    org.springframework.r2dbc.core: DEBUG
+    io.r2dbc.spi: DEBUG
